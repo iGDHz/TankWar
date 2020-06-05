@@ -1,0 +1,348 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    05/23/2020  17:42:10  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE STARTUP.obj, .\button.obj TO button RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  .\button.obj (BUTTON)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (STRLEN)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+
+
+LINK MAP OF MODULE:  button (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000CH     UNIT         _DATA_GROUP_
+            DATA    0014H     0007H     UNIT         ?DT?BUTTON
+            IDATA   001BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0008H     UNIT         ?PR?_SEND?BUTTON
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0015H     UNIT         ?PR?_STRLEN?STRLEN
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     009BH     UNIT         ?C?LIB_CODE
+            CODE    00C1H     0083H     UNIT         ?PR?_SHOWPOINT?BUTTON
+            CODE    0144H     005BH     UNIT         ?PR?BUTTON?BUTTON
+            CODE    019FH     004CH     UNIT         ?PR?TIMER0?BUTTON
+            CODE    01EBH     004BH     UNIT         ?PR?MUSIC?BUTTON
+            CODE    0236H     002CH     UNIT         ?PR?MAIN?BUTTON
+            CODE    0262H     0024H     UNIT         ?PR?RE?BUTTON
+            CODE    0286H     001EH     UNIT         ?PR?_DELAY?BUTTON
+            CODE    02A4H     001CH     UNIT         ?CO?BUTTON
+            CODE    02C0H     000CH     UNIT         ?C_C51STARTUP
+            CODE    02CCH     000AH     UNIT         ?PR?RECEIVE?BUTTON
+
+
+
+OVERLAY MAP OF MODULE:   button (?C_STARTUP)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?BUTTON
+
+?PR?MAIN?BUTTON                -----    -----
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/23/2020  17:42:10  PAGE 2
+
+
+  +--> ?PR?_SHOWPOINT?BUTTON
+  +--> ?PR?BUTTON?BUTTON
+  +--> ?PR?_DELAY?BUTTON
+
+?PR?_SHOWPOINT?BUTTON          0008H    000CH
+  +--> ?CO?BUTTON
+  +--> ?PR?_DELAY?BUTTON
+
+?PR?BUTTON?BUTTON              -----    -----
+  +--> ?PR?_SEND?BUTTON
+  +--> ?CO?BUTTON
+  +--> ?PR?MUSIC?BUTTON
+
+?PR?MUSIC?BUTTON               -----    -----
+  +--> ?PR?_STRLEN?STRLEN
+  +--> ?PR?_DELAY?BUTTON
+
+
+
+SYMBOL TABLE OF MODULE:  button (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:02C0H         SEGMENT       ?C_C51STARTUP
+  I:001BH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:02C3H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:02C0H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:02C0H         LINE#         133
+  C:02C2H         LINE#         134
+  C:02C3H         LINE#         135
+  C:02C4H         LINE#         136
+  C:02C6H         LINE#         185
+  C:02C9H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/23/2020  17:42:10  PAGE 3
+
+
+
+  -------         MODULE        BUTTON
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0144H         PUBLIC        Button
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:02BEH         PUBLIC        Music_Over
+  D:00B0H         PUBLIC        P3
+  C:01EBH         PUBLIC        Music
+  B:00A8H.7       PUBLIC        EA
+  C:0003H         PUBLIC        _Send
+  D:00A8H         PUBLIC        IE
+  C:0286H         PUBLIC        _delay
+  B:00A8H.4       PUBLIC        ES
+  D:00B8H         PUBLIC        IP
+  B:0098H.0       PUBLIC        RI
+  B:0098H.1       PUBLIC        TI
+  C:02A4H         PUBLIC        points
+  D:0014H         PUBLIC        music_code
+  C:0236H         PUBLIC        main
+  B:00A0H.6       PUBLIC        dula
+  D:0017H         PUBLIC        music_times
+  B:00A0H.7       PUBLIC        wela
+  D:0019H         PUBLIC        point
+  C:00C1H         PUBLIC        _ShowPoint
+  D:0099H         PUBLIC        SBUF
+  D:0087H         PUBLIC        PCON
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:02CCH         PUBLIC        Receive
+  B:00A8H.1       PUBLIC        ET0
+  C:02AEH         PUBLIC        Music_Begin
+  D:008CH         PUBLIC        TH0
+  D:008DH         PUBLIC        TH1
+  D:008AH         PUBLIC        TL0
+  D:008BH         PUBLIC        TL1
+  C:019FH         PUBLIC        timer0
+  B:0088H.4       PUBLIC        TR0
+  C:0262H         PUBLIC        re
+  B:0088H.6       PUBLIC        TR1
+  B:0098H.4       PUBLIC        REN
+  D:00C8H         PUBLIC        T2CON
+  B:00A0H.5       PUBLIC        SPK
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0286H         LINE#         24
+  C:0286H         LINE#         25
+  C:0286H         LINE#         27
+  C:028FH         LINE#         28
+  C:028FH         LINE#         29
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/23/2020  17:42:10  PAGE 4
+
+
+  C:029CH         LINE#         31
+  C:02A3H         LINE#         32
+  -------         ENDPROC       _DELAY
+  -------         PROC          _SHOWPOINT
+  D:0082H         SYMBOL        point
+  -------         DO            
+  D:0002H         SYMBOL        i
+  D:0008H         SYMBOL        point_num
+  D:0001H         SYMBOL        wei
+  -------         ENDDO         
+  C:00C1H         LINE#         34
+  C:00C5H         LINE#         35
+  C:00C5H         LINE#         38
+  C:00C9H         LINE#         39
+  C:00D1H         LINE#         40
+  C:00D1H         LINE#         41
+  C:00EBH         LINE#         42
+  C:00FAH         LINE#         43
+  C:00FCH         LINE#         44
+  C:00FEH         LINE#         45
+  C:0102H         LINE#         46
+  C:0102H         LINE#         47
+  C:0104H         LINE#         48
+  C:011BH         LINE#         49
+  C:011DH         LINE#         50
+  C:011FH         LINE#         51
+  C:0121H         LINE#         52
+  C:0123H         LINE#         53
+  C:012FH         LINE#         54
+  C:0132H         LINE#         55
+  C:0138H         LINE#         56
+  C:0143H         LINE#         57
+  -------         ENDPROC       _SHOWPOINT
+  -------         PROC          _SEND
+  D:0007H         SYMBOL        dat
+  C:0003H         LINE#         59
+  C:0003H         LINE#         60
+  C:0003H         LINE#         61
+  C:0005H         LINE#         62
+  C:0008H         LINE#         63
+  C:000AH         LINE#         64
+  -------         ENDPROC       _SEND
+  -------         PROC          RECEIVE
+  -------         DO            
+  D:0007H         SYMBOL        dat
+  -------         ENDDO         
+  C:02CCH         LINE#         66
+  C:02CCH         LINE#         67
+  C:02CCH         LINE#         69
+  C:02CFH         LINE#         70
+  C:02D1H         LINE#         71
+  C:02D3H         LINE#         72
+  C:02D5H         LINE#         73
+  -------         ENDPROC       RECEIVE
+  -------         PROC          MUSIC
+  C:01EBH         LINE#         75
+  C:01EBH         LINE#         76
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/23/2020  17:42:10  PAGE 5
+
+
+  C:01EBH         LINE#         77
+  C:01F0H         LINE#         78
+  C:0201H         LINE#         79
+  C:0203H         LINE#         80
+  C:0205H         LINE#         81
+  C:0207H         LINE#         82
+  C:0209H         LINE#         83
+  C:021BH         LINE#         84
+  C:021BH         LINE#         85
+  C:0226H         LINE#         86
+  C:022DH         LINE#         87
+  C:022FH         LINE#         88
+  C:0231H         LINE#         89
+  C:0233H         LINE#         90
+  C:0235H         LINE#         91
+  -------         ENDPROC       MUSIC
+  -------         PROC          BUTTON
+  -------         DO            
+  D:0007H         SYMBOL        temp
+  -------         ENDDO         
+  C:0144H         LINE#         93
+  C:0144H         LINE#         94
+  C:0144H         LINE#         96
+  C:0146H         LINE#         97
+  C:0149H         LINE#         98
+  C:014CH         LINE#         99
+  C:0165H         LINE#         100
+  C:0165H         LINE#         101
+  C:0175H         LINE#         102
+  C:0188H         LINE#         103
+  C:018CH         LINE#         104
+  C:0190H         LINE#         105
+  C:0194H         LINE#         106
+  C:0199H         LINE#         107
+  C:0199H         LINE#         108
+  C:0199H         LINE#         109
+  C:019EH         LINE#         110
+  -------         ENDPROC       BUTTON
+  -------         PROC          MAIN
+  C:0236H         LINE#         112
+  C:0236H         LINE#         113
+  C:0236H         LINE#         114
+  C:0239H         LINE#         115
+  C:023CH         LINE#         116
+  C:023FH         LINE#         117
+  C:0242H         LINE#         118
+  C:0245H         LINE#         119
+  C:0247H         LINE#         120
+  C:0249H         LINE#         121
+  C:024BH         LINE#         122
+  C:024FH         LINE#         123
+  C:024FH         LINE#         124
+  C:024FH         LINE#         125
+  C:0256H         LINE#         126
+  C:0259H         LINE#         127
+  C:0260H         LINE#         128
+  -------         ENDPROC       MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/23/2020  17:42:10  PAGE 6
+
+
+  -------         PROC          TIMER0
+  C:019FH         LINE#         131
+  C:01B4H         LINE#         134
+  C:01C5H         LINE#         135
+  C:01D6H         LINE#         136
+  C:01D8H         LINE#         137
+  -------         ENDPROC       TIMER0
+  -------         PROC          RE
+  -------         DO            
+  D:0006H         SYMBOL        temp
+  -------         ENDDO         
+  C:0262H         LINE#         139
+  C:026BH         LINE#         142
+  C:026EH         LINE#         143
+  C:026EH         LINE#         144
+  C:0271H         LINE#         145
+  C:0273H         LINE#         146
+  C:0275H         LINE#         147
+  C:027FH         LINE#         148
+  C:027FH         LINE#         149
+  -------         ENDPROC       RE
+  -------         ENDMOD        BUTTON
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0026H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?UIDIV
+  C:0053H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        STRLEN
+  C:000EH         PUBLIC        _STRLEN
+  -------         ENDMOD        STRLEN
+
+  -------         MODULE        ?C?CLDPTR
+  C:00A8H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+
+Program Size: data=28.0 xdata=0 code=726
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

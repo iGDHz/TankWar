@@ -1,0 +1,300 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Hz_C\QG\TankWar3.0\Keil\button.uvproj
+Project File Date:  05/20/2020
+
+<h2>Output:</h2>
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+..\src\button.c(72): warning C280: 'music': unreferenced local variable
+..\src\button.c(119): warning C280: 'temp': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITIALSOUND?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PLAY?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    000BH
+    TO:      000DH
+Program Size: data=85.0 xdata=0 code=1736
+creating hex file from "button"...
+"button" - 0 Error(s), 7 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+..\src\button.c(73): warning C280: 'music': unreferenced local variable
+..\src\button.c(119): warning C280: 'temp': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITIALSOUND?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PLAY?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    000BH
+    TO:      000DH
+Program Size: data=85.0 xdata=0 code=1733
+creating hex file from "button"...
+"button" - 0 Error(s), 7 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+..\src\button.c(120): warning C280: 'temp': unreferenced local variable
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MUSIC
+    MODULE:  .\button.obj (BUTTON)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITIALSOUND?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PLAY?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    000BH
+    TO:      000DH
+Program Size: data=85.0 xdata=0 code=1767
+目标未创建
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MUSIC
+    MODULE:  .\button.obj (BUTTON)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITIALSOUND?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PLAY?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    000BH
+    TO:      000DH
+Program Size: data=83.0 xdata=0 code=1767
+目标未创建
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MUSIC
+    MODULE:  .\button.obj (BUTTON)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITIALSOUND?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PLAY?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    000BH
+    TO:      000DH
+Program Size: data=83.0 xdata=0 code=1746
+目标未创建
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MUSIC
+    MODULE:  .\button.obj (BUTTON)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INITIALSOUND?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PLAY?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    000BH
+    TO:      000DH
+Program Size: data=83.0 xdata=0 code=1747
+目标未创建
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  MUSIC
+    MODULE:  .\button.obj (BUTTON)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=616
+目标未创建
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=616
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=637
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=629
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=629
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=633
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=633
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=686
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=682
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=682
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=678
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+..\src\button.c(142): error C141: syntax error near ')'
+目标未创建
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+..\src\button.c(142): warning C276: constant in condition expression
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=724
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+..\src\button.c(142): warning C276: constant in condition expression
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SHOWPOINT?BUTTON
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=717
+creating hex file from "button"...
+"button" - 0 Error(s), 3 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+..\src\button.c(142): warning C276: constant in condition expression
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=724
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling button.c...
+..\src\button.c(142): warning C276: constant in condition expression
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RECEIVE?BUTTON
+Program Size: data=28.0 xdata=0 code=726
+creating hex file from "button"...
+"button" - 0 Error(s), 2 Warning(s).

@@ -1,0 +1,178 @@
+C51 COMPILER V9.57.0.0   BUTTON                                                            05/23/2020 17:42:10 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE BUTTON
+OBJECT MODULE PLACED IN .\button.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE ..\src\button.c BROWSE DEBUG OBJECTEXTEND PRINT(.\button.lst) OBJECT(.\b
+                    -utton.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<string.h>
+   3          #include<intrins.h>
+   4          #define uchar unsigned char
+   5          #define uint unsigned int
+   6          
+   7          sbit dula = P2^6;
+   8          sbit wela = P2^7;
+   9          sbit GAME = P1^6;
+  10          sbit SPK = P2^5;
+  11          
+  12          uchar *music_code;
+  13          uint music_times;
+  14          uint point;
+  15          uchar code points[] = {
+  16          0x3f,0x06,0x5b,0x4f,0x66,
+  17          0x6d,0x7d,0x07,0x7f,0x6f
+  18          };                                                      
+  19          
+  20          unsigned char code Music_Begin[]={ 0xf8,0x8c, 0xf9,0x5b, 0xfa,0x15, 0xfa,0x67, 0xfb,0x04,
+  21                                            0xfb,0xa6,  0xfc,0x0c, 0xfe,0x22};
+  22          unsigned char code Music_Over[]={ 0xf8,0x8c};
+  23          
+  24          void delay(uint xms)
+  25          {
+  26   1              uint i,j;
+  27   1              for(i = xms; i > 0; i--)
+  28   1              {
+  29   2                      for(j = 250; j > 0; j--)
+  30   2                      ;
+  31   2              }
+  32   1      }
+  33          
+  34          void ShowPoint(uint point)
+  35          {
+  36   1              int i,point_num[6];
+  37   1              uchar wei;
+  38   1              i = 5;
+  39   1              while(i>=0)     
+  40   1              {
+  41   2                      point_num[i--] = point%10;
+  42   2                      point /= 10;
+  43   2              }
+  44   1              wei = 0xdf;
+  45   1              for(i = 5; i >= 0; i--)
+  46   1              {
+  47   2                      dula = 1;
+  48   2                      P0 = points[point_num[i]];
+  49   2                      dula = 0;
+  50   2                      wela = 1;
+  51   2                      P0 = wei;
+  52   2                      wela = 0;
+  53   2                      wei = _crol_(wei,-1);
+  54   2                      P0 = 0x00;//消隐
+C51 COMPILER V9.57.0.0   BUTTON                                                            05/23/2020 17:42:10 PAGE 2   
+
+  55   2                      delay(1);
+  56   2              }
+  57   1      }
+  58          
+  59          void Send (unsigned char dat) //发送单片机信息
+  60          {
+  61   1              SBUF=dat;
+  62   1              while(TI==0);
+  63   1              TI=0;
+  64   1      }
+  65          
+  66          unsigned int Receive(void)       //接收单片机信息
+  67          {
+  68   1              unsigned char dat;
+  69   1              while(RI==0);
+  70   1              RI=0;
+  71   1              dat=SBUF;
+  72   1              return dat;
+  73   1      }
+  74          
+  75          void Music()
+  76          {
+  77   1              music_times = 0;
+  78   1              TH0 =  music_code[music_times];
+  79   1              TL0 =  music_code[music_times];
+  80   1              TR0 = 1;
+  81   1              EA = 1;
+  82   1              ET0 = 1;
+  83   1              while(music_times<strlen(music_code))
+  84   1              {                                                 
+  85   2                      music_times += 2;
+  86   2                      delay(30);
+  87   2              }
+  88   1              TR0 = 0;
+  89   1              EA = 0;
+  90   1              ET0 =0;
+  91   1      }
+  92          
+  93          void Button()
+  94          {
+  95   1              uchar temp;
+  96   1              temp = P1;
+  97   1              temp = ~temp;
+  98   1              temp = temp & 0x3f;
+  99   1              switch(temp)
+ 100   1              {
+ 101   2                      case 0x01:Send(0);music_code = Music_Over;Music();break;
+ 102   2                      case 0x02:Send(5);music_code = Music_Begin;Music();break;
+ 103   2                      case 0x04:Send(3);break;//UP
+ 104   2                      case 0x08:Send(4);break;//DOWN
+ 105   2                      case 0x10:Send(1);break;//LEFT
+ 106   2                      case 0x20:Send(2);break;//RIGHT
+ 107   2                      default:;break;
+ 108   2              }
+ 109   1              while(P1!=0xff) ;
+ 110   1      }
+ 111          
+ 112          void main()
+ 113          {
+ 114   1              TMOD=0x21;
+ 115   1          SCON=0x50;
+ 116   1          PCON=0x00;
+C51 COMPILER V9.57.0.0   BUTTON                                                            05/23/2020 17:42:10 PAGE 3   
+
+ 117   1          TH1=0xfa;
+ 118   1          TL1=0xfa;
+ 119   1          TR1=1;
+ 120   1              ES=1;//开串口中断
+ 121   1          REN=1;//允许接收
+ 122   1              point = 0;               
+ 123   1              while(1)
+ 124   1              {
+ 125   2                      ShowPoint(point);
+ 126   2                      Button();
+ 127   2                      delay(5);
+ 128   2              }
+ 129   1      }
+ 130          
+ 131          void timer0() interrupt 1 
+ 132          {
+ 133   1      
+ 134   1              TH0 =  music_code[music_times];
+ 135   1              TL0 =  music_code[music_times+1];
+ 136   1              SPK = !SPK;
+ 137   1      }
+ 138          
+ 139          void re() interrupt 4
+ 140          {
+ 141   1              uint temp;
+ 142   1                      if(RI = 1)
+*** WARNING C276 IN LINE 142 OF ..\src\button.c: constant in condition expression
+ 143   1                      {
+ 144   2                while(RI==0);
+ 145   2                RI=0;
+ 146   2                temp=SBUF;
+ 147   2                point += temp;
+ 148   2                      }
+ 149   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    501    ----
+   CONSTANT SIZE    =     28    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      7      12
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

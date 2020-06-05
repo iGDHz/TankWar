@@ -1,0 +1,180 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Hz_C\QG\TankWar3.0\Keil\tankwar.uvproj
+Project File Date:  05/17/2020
+
+<h2>Output:</h2>
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(72): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=333 code=13206
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(72): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=333 code=13206
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(71): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=331 code=13206
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(71): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=331 code=13209
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+compiling main.c...
+..\src\main.c(71): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=331 code=13209
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(71): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=331 code=13218
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(71): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=331 code=13208
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(71): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=331 code=13206
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(71): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=331 code=13208
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\game.c(643): warning C280: 'dat': unreferenced local variable
+..\src\main.c(71): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  RECEIVE
+    MODULE:  .\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  RECEIVE
+    MODULE:  .\main.obj (MAIN)
+    ADDRESS: 2FDDH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  RECEIVE
+    MODULE:  .\main.obj (MAIN)
+    ADDRESS: 3140H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  RECEIVE
+    MODULE:  .\main.obj (MAIN)
+    ADDRESS: 26E2H
+Program Size: data=9.0 xdata=332 code=13277
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 9 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(71): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=331 code=13203
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).
+Build target '目标 1'
+assembling STARTUP.A51...
+compiling main.c...
+..\src\main.c(74): warning C291: not every exit path returns a value
+..\src\main.c(142): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SET?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BUTTONDOWN?MAIN
+Program Size: data=9.0 xdata=331 code=13209
+creating hex file from "tankwar"...
+"tankwar" - 0 Error(s), 4 Warning(s).

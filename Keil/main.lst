@@ -1,0 +1,173 @@
+C51 COMPILER V9.57.0.0   MAIN                                                              05/23/2020 17:35:03 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\main.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE ..\src\main.c LARGE BROWSE DEBUG OBJECTEXTEND PRINT(.\main.lst) OBJECT(.
+                    -\main.obj)
+
+line level    source
+
+   1          /***************************************************************************************
+   2           *      FileName                                        :       main.c
+   3           *      CopyRight                                       :
+   4           *      ModuleName                                      :       
+   5           *
+   6           *      CPU                                                     :
+   7           *      RTOS                                            :
+   8           *
+   9           *      Create Data                                     :       2020/5/15
+  10           *      Author/Corportation                     :       Hz
+  11           *
+  12           *      Abstract Description            :       
+  13           *
+  14           *--------------------------------Revision History--------------------------------------
+  15           *      No      version         Data                    Revised By                      Item                    Description
+  16           *      
+  17           *
+  18           ***************************************************************************************/
+  19          
+  20           /**************************************************************
+  21          *       Include File Section
+  22          **************************************************************/
+  23          
+  24          #include "../inc/main.h"
+  25          #include "12864.c"
+  26          #include "game.c"
+  27          
+  28          void LevelChoice()
+  29          {
+  30   1              SelectScreen(0);
+  31   1              Show1616(0,0,level+32*7);//箭头
+  32   1              Show1616(0,16*1,level);
+  33   1              Show1616(0,16*2,level+32*1);
+  34   1              Show1616(0,16*3,level+32*6);//第一关
+  35   1              Show1616(2,16*1,level);
+  36   1              Show1616(2,16*2,level+32*2);
+  37   1              Show1616(2,16*3,level+32*6);//第二关
+  38   1              Show1616(2*2,0,level+32*8);
+  39   1              Show1616(2*2,16*1,level);
+  40   1              Show1616(2*2,16*2,level+32*3);
+  41   1              Show1616(2*2,16*3,level+32*6);//第三关
+  42   1              SelectScreen(1);
+  43   1              Show1616(0,16*5,level);
+  44   1              Show1616(0,16*6,level+32*4);
+  45   1              Show1616(0,16*7,level+32*6);//第四关
+  46   1              Show1616(2,16*5,level);
+  47   1              Show1616(2,16*6,level+32*5);
+  48   1              Show1616(2,16*7,level+32*6);//第五关    
+  49   1      }
+  50          
+  51          void Border()//边框
+  52          {
+  53   1              uint pos,i,flag;
+  54   1              uchar raw;
+C51 COMPILER V9.57.0.0   MAIN                                                              05/23/2020 17:35:03 PAGE 2   
+
+  55   1              raw = 0xb8;
+  56   1              flag = 0;//屏幕选择
+  57   1              pos = 0;
+  58   1              SelectScreen(0);
+  59   1              Write_com(0x40);//跳转至左屏首列
+  60   1              SelectScreen(1);
+  61   1              Write_com(0x40);//跳转至右屏首列
+  62   1              while(raw<=0xbf)
+  63   1              {
+  64   2                      SelectScreen(flag);
+  65   2                      flag = !flag;
+  66   2                      Write_com(raw);//跳至对应行
+  67   2                      if(!flag) raw += 1;
+  68   2                      for(i = 0; i < 64; i++)
+  69   2                      {
+  70   3                              Write_data(table[pos++]);
+  71   3                      }       
+  72   2              }
+  73   1      }
+  74          
+  75          int main()
+  76          {       
+  77   1              uchar temp;
+  78   1              Write_com(0x3f);
+  79   1              ClearScreen(2);
+  80   1              LevelChoice();
+  81   1              TMOD=0x21;//设置定时器1为工作方式2；
+  82   1          SCON=0x40;
+  83   1          PCON=0x00;
+  84   1          TH1=0xfa;
+  85   1          TL1=0xfa;
+  86   1          TR1=1;
+  87   1              REN=1;
+  88   1              while(1)
+  89   1              {
+  90   2                      temp = Receive();
+  91   2                      switch(temp)
+  92   2                      {
+  93   3                              case 0:Border();game();break;
+  94   3                              case 1:{
+  95   4                              if(arrow[1])//位于右屏跳转
+  96   4                              {
+  97   5                                      SelectScreen(arrow[1]);
+  98   5                                      Show1616(arrow[0],0,level+32*8);
+  99   5                                      arrow[1] = 0;
+ 100   5                                      SelectScreen(arrow[1]);
+ 101   5                                      Show1616(arrow[0],0,level+32*7);
+ 102   5                                      while(P1!=0xff) ;
+ 103   5                              }
+ 104   4                              break;}
+ 105   3                              case 2:{
+ 106   4                              if(!arrow[1])//左屏跳转
+ 107   4                              {
+ 108   5                                      if(arrow[0] == 4) break;
+ 109   5                                      SelectScreen(arrow[1]);
+ 110   5                                      Show1616(arrow[0],0,level+32*8);
+ 111   5                                      arrow[1] = 1;
+ 112   5                                      SelectScreen(arrow[1]);
+ 113   5                                      Show1616(arrow[0],0,level+32*7);        
+ 114   5                                      while(P1!=0xff);
+ 115   5                              }
+ 116   4                              break;}
+C51 COMPILER V9.57.0.0   MAIN                                                              05/23/2020 17:35:03 PAGE 3   
+
+ 117   3                              case 3:{
+ 118   4                              if(arrow[0])//箭头位于首行不进行跳转
+ 119   4                              {
+ 120   5                                      SelectScreen(arrow[1]);
+ 121   5                                      Show1616(arrow[0],0,level+32*8);
+ 122   5                                      arrow[0] -= 2;//
+ 123   5                                      Show1616(arrow[0],0,level+32*7);
+ 124   5                                      while(P1!=0xff);
+ 125   5                              }
+ 126   4                              break;}
+ 127   3                              case 4:{
+ 128   4                              if(arrow[0]!=4)//箭头位于最后一行不进行跳转
+ 129   4                              {
+ 130   5                                      if(arrow[1] && arrow[0]==2) break;
+ 131   5                                      SelectScreen(arrow[1]);
+ 132   5                                      Show1616(arrow[0],0,level+32*8);
+ 133   5                                      arrow[0] += 2;//
+ 134   5                                      Show1616(arrow[0],0,level+32*7);
+ 135   5                                      while(P1!=0xff);
+ 136   5                              }
+ 137   4                              break;}
+ 138   3                              case 5:Border();game();break;
+ 139   3                              default:break;
+ 140   3                      }
+ 141   2              }
+ 142   1              return 0;
+ 143   1      }
+*** WARNING C291 IN LINE 74 OF ..\src\main.c: not every exit path returns a value
+*** WARNING C294 IN LINE 142 OF ..\src\main.c: unreachable code
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   9765    ----
+   CONSTANT SIZE    =   2441    ----
+   XDATA SIZE       =    286      90
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  2 WARNING(S),  0 ERROR(S)
